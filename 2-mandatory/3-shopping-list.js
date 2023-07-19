@@ -15,11 +15,17 @@
 
 let pantry = {
   fridgeContents: ["butter", "milk"],
-  cupboardContents: ["salt", "tinned tomatoes", "oregano"],
+  cupboardContents: ["salt", "tinned tomatoes", "oregano"]
 };
 
 function createShoppingList(recipe) {
-  // write code here
+  let allPantryItems = pantry.fridgeContents.concat(pantry.cupboardContents);
+  let missingIngredients = recipe.ingredients.filter(ingredient => !allPantryItems.includes(ingredient));
+  let shoppingList = {
+    name: recipe.name,
+    items: missingIngredients,
+  };
+  return shoppingList;
 }
 
 /* ======= TESTS - DO NOT MODIFY =====

@@ -9,6 +9,7 @@
 */
 
 // Example 1
+// There is undefined output because car has no property colour
 let car = {
   brand: "Ford",
   yearsOld: 8,
@@ -17,6 +18,7 @@ let car = {
 console.log(car["colour"]);
 
 // Example 2
+// There is undefined output because car user no property firstName
 function sayHelloToUser(user) {
   console.log(`Hello ${user.firstName}`);
 }
@@ -28,6 +30,7 @@ let user = {
 sayHelloToUser(user);
 
 // Example 3
+//There is undefined output because getName function has no return statement
 let myPet = {
   animal: "Cat",
   getName: function() {

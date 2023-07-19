@@ -22,4 +22,13 @@
   You should write and log at least 5 recipes
 */
 
-// write code here
+let recipe = {
+  title: "Mole",
+  servings: 2,
+  ingredients: ["cinnamon", "cumin", "cocoa"]
+};
+
+let formattedRecipe = `${recipe.title}\nServes: ${recipe.servings}\nIngredients:\n`;
+formattedRecipe += recipe.ingredients.join("\n");
+
+console.log(formattedRecipe);

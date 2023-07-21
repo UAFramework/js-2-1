@@ -23,3 +23,38 @@
 */
 
 // write code here
+let recipes = [
+ {title: usvar,
+servings: 12,
+ingredients: [water, apple, sugar, anis]
+},
+{
+  title: khachapuri,
+  servings: 3,
+  ingredients: [water, salt, mehl, cheese, eggs]
+  },
+  {
+    title: sweetnapkins,
+    servings: 1,
+    ingredients: [napkins, honey, bee]
+    },
+  {
+      title: coffee,
+      servings: 2,
+      ingredients: [coffeebeans, water, pepper, salt]
+      },
+      {
+        title: plow,
+        servings: 12,
+        ingredients: [meat, rice, onion, carrot, garlic, water, species]
+        }] 
+
+        if (i=0; i < recipes.length; i++)
+        {
+          console.log(recipes[i]);
+        }
+
+
+
+
+

@@ -15,6 +15,11 @@ let student = {
     - Set the value of attendance to 90
 */
 
+student['attendance'] = 90;
+if ('attendance' in student >=90 && "examScore" in student > 60)
+delete student.hasPassed
+  student.hasPassed = true;
+
 // write code here
 
 /*

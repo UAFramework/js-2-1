@@ -55,6 +55,13 @@ function formatCourseworkResult(trainee) {
     score: 63
   }
 */
+test("formatCourseworkResult returns the correct result for Xin", () => {
+  const trainee = {
+    name: "Xin",
+    score: 63,
+  };
+  expect(formatCourseworkResult(trainee)).toBe("Xin's coursework was marked as grade C.");
+});
 
 /*
   Write a test that checks the output of formatCourseworkResult when passed the following trainee:
@@ -63,6 +70,13 @@ function formatCourseworkResult(trainee) {
     score: 78
   }
 */
+test("formatCourseworkResult returns the correct result for Mona", () => {
+  const trainee = {
+    name: "Mona",
+    score: 78,
+  };
+  expect(formatCourseworkResult(trainee)).toBe("Mona's coursework was marked as grade B.");
+});
 
 /*
   Write a test that checks the output of formatCourseworkResult when passed the following trainee:
@@ -73,6 +87,15 @@ function formatCourseworkResult(trainee) {
     subjects: ["JavaScript", "React", "CSS"]
   }
 */
+test("formatCourseworkResult returns the correct result for Ali", () => {
+  const trainee = {
+    name: "Ali",
+    score: 49,
+    age: 33,
+    subjects: ["JavaScript", "React", "CSS"],
+  };
+  expect(formatCourseworkResult(trainee)).toBe("Ali's coursework was marked as grade E.");
+});
 
 /*
   Write a test that checks the output of formatCourseworkResult when passed the following trainee:
@@ -81,6 +104,13 @@ function formatCourseworkResult(trainee) {
     age: 29
   }
 */
+test("formatCourseworkResult returns an error message for missing name", () => {
+  const trainee = {
+    score: 90,
+    age: 29,
+  };
+  expect(formatCourseworkResult(trainee)).toBe("Error: No trainee name!");
+});
 
 /*
   Write a test that checks the output of formatCourseworkResult when passed the following trainee:
@@ -89,3 +119,10 @@ function formatCourseworkResult(trainee) {
     subjects: ["HTML", "CSS", "Databases"]
   }
 */
+test("formatCourseworkResult returns an error message for non-numeric score", () => {
+  const trainee = {
+    name: "Aman",
+    subjects: ["HTML", "CSS", "Databases"],
+  };
+  expect(formatCourseworkResult(trainee)).toBe("Error: Coursework percent is not a number!");
+});

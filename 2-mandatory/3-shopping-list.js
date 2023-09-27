@@ -19,7 +19,18 @@ let pantry = {
 };
 
 function createShoppingList(recipe) {
-  // write code here
+  const missingIngredients = [];
+
+  for (const ingredient of recipe.ingredients) {
+    if (!pantry.fridgeContents.includes(ingredient) && !pantry.cupboardContents.includes(ingredient)) {
+      missingIngredients.push(ingredient);
+    }
+  }
+
+  return {
+    name: recipe.name,
+    items: missingIngredients,
+  };
 }
 
 /* ======= TESTS - DO NOT MODIFY =====

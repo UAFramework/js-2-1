@@ -10,7 +10,7 @@ let capitalCities = {
   },
   China: {
     name: "Beijing",
-  }
+  },
 };
 
 /*
@@ -24,7 +24,14 @@ let capitalCities = {
 
 // write code here
 
-console.log(capitalCities);
+let newCapitalCities = capitalCities;
+newCapitalCities.UnitedKingdom.population = 8980000;
+newCapitalCities.China.population = 21500000;
+newCapitalCities.Peru = {};
+newCapitalCities.Peru.name = "Lima";
+newCapitalCities.Peru.population = 9750000;
+
+console.log(newCapitalCities);
 
 /* EXPECTED RESULT
 

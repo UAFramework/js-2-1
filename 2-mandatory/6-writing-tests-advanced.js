@@ -10,7 +10,7 @@
   trainee has completed.
 */
 
-function convertScoreToGrade() {
+function convertScoreToGrade(score) {
   let grade = null;
 
   if (score >= 80) {
@@ -48,44 +48,52 @@ function formatCourseworkResult(trainee) {
 - (Reminder: You must have run `npm install` one time before this will work!)
 */
 
-/*
-  Write a test that checks the output of formatCourseworkResult when passed the following trainee:
-  {
+test("formatCourseworkResult should return correct string for a trainee with name 'Xin' and score 63", () => {
+  const trainee = {
     name: "Xin",
-    score: 63
-  }
-*/
+    score: 63,
+  };
+  expect(formatCourseworkResult(trainee)).toBe(
+    "Xin's coursework was marked as grade C."
+  );
+});
 
-/*
-  Write a test that checks the output of formatCourseworkResult when passed the following trainee:
-  {
+test("formatCourseworkResult should return correct string for a trainee with name 'Mona' and score 78", () => {
+  const trainee = {
     name: "Mona",
-    score: 78
-  }
-*/
+    score: 78,
+  };
+  expect(formatCourseworkResult(trainee)).toBe(
+    "Mona's coursework was marked as grade B."
+  );
+});
 
-/*
-  Write a test that checks the output of formatCourseworkResult when passed the following trainee:
-  {
+test("formatCourseworkResult should return 'Error: Coursework percent is not a number!' for a trainee without score property", () => {
+  const trainee = {
     name: "Ali",
-    score: 49,
     age: 33,
-    subjects: ["JavaScript", "React", "CSS"]
-  }
-*/
+    subjects: ["JavaScript", "React", "CSS"],
+  };
+  expect(formatCourseworkResult(trainee)).toBe(
+    "Error: Coursework percent is not a number!"
+  );
+});
 
-/*
-  Write a test that checks the output of formatCourseworkResult when passed the following trainee:
-  {
+test("formatCourseworkResult should return 'Error: No trainee name!' for a trainee without name property", () => {
+  const trainee = {
     score: 90,
-    age: 29
-  }
-*/
+    age: 29,
+  };
+  expect(formatCourseworkResult(trainee)).toBe("Error: No trainee name!");
+});
 
-/*
-  Write a test that checks the output of formatCourseworkResult when passed the following trainee:
-  {
+test("formatCourseworkResult should return correct string for a trainee with name 'Aman'", () => {
+  const trainee = {
     name: "Aman",
-    subjects: ["HTML", "CSS", "Databases"]
-  }
-*/
+    subjects: ["HTML", "CSS", "Databases"],
+    score: 30,
+  };
+  expect(formatCourseworkResult(trainee)).toBe(
+    "Aman's coursework was marked as grade E."
+  );
+});

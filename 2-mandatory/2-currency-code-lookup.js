@@ -29,12 +29,7 @@ function createLookup(COUNTRY_CURRENCY_CODES) {
 );
 }
 
-console.log(createLookup([
-  ["GB", "GBP"],
-  ["DE", "EUR"],
-  ["NG", "NGN"],
-  ["MX", "MXN"],
-]))
+console.log(createLookup(COUNTRY_CURRENCY_CODES))
   // write code here
 
 

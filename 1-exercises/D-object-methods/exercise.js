@@ -8,10 +8,16 @@
 */
 
 let student = {
-  // write code here
-}
-
+  name: "Daniel",
+  getName: function (name) {  
+        return this.name;
+  },
+    
+  } 
+      // write code here
+      
 student.getName("Daniel");
+console.log("Student name: " + student.getName());
 
 /* EXPECTED RESULT
 

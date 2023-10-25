@@ -24,12 +24,27 @@
 */
 
 function countWords(string) {
+//   const wordCount = {};
+// string.split(" ").forEach(function(word) {
+//   wordCount[word]= wordCount[word] ? ++wordCount[word] :1;
+// });
+//   // write code here
+  
+      
+//   return wordCount;
+  const words = string.split(' ');
   const wordCount = {};
-
-  // write code here
-
+  if (string.length!=0){
+    words.forEach(word => {
+      wordCount[word] = wordCount[word] + 1 || 1;
+  });
   return wordCount;
 }
+  else{
+    return {};
+  }
+}
+
 
 /* ======= TESTS - DO NOT MODIFY =====
 - To run the tests for this exercise, run `npm run extra-tests`

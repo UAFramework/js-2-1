@@ -19,8 +19,9 @@ let dog = {
 let dogName = dog.name; // complete the code
 let dogBreed = dog.breed; // complete the code
 
-console.log(`${dogName} is a ${dogBreed}`);
+// console.log(`${dogName} is a ${dogBreed}`);
 
+console.log(dog.name + " is a " + dog.breed);
 /* EXPECTED RESULT
 
   Spot is a Dalmatian

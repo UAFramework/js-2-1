@@ -8,16 +8,16 @@
 */
 
 let student = {
+  name: "Daniel",
   getName: function (name) {  
-  
-      console.log("Student name: " + this.name);
-  }
+        return this.name;
+  },
     
   } 
       // write code here
       
-    
 student.getName("Daniel");
+console.log("Student name: " + student.getName());
 
 /* EXPECTED RESULT
 
